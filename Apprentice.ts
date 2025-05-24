@@ -3,7 +3,7 @@
 */
 const enum KBitMotorObs {
   //% block="Côté gauche"
-    coté gauche = 0,
+    coté_gauche = 0,
     //% block="Côté droit"
     coté droit = 1
 }
