@@ -23,10 +23,10 @@ const enum KBitColor {
  * used for control motor
  */
 const enum KBitDir {
-    RunForward = 0,
-    RunBack = 1,
-    TurnLeft = 2,
-    TurnRight = 3
+    RunForwardcode = 0,
+    RunBackcode = 1,
+    TurnLeftcode = 2,
+    TurnRightcode = 3
 }
 
 const enum KBitIrButtons {
@@ -153,7 +153,7 @@ namespace kBit {
      * @param direction type of movement to make
      * @param speed how fast to make movement
      */
-    //% block="car $direction speed: $speed \\%"
+    //% block="voiture $direction speed: $speed \\%"
     //% speed.min=0 speed.max=100
     //% group="Motor" weight=99
     export function run(direction: KBitDir, speed: number) {
@@ -244,7 +244,7 @@ namespace kBit {
      * stop individual motors
      * @param M which motor to stop
      */
-    //% block="stop $m motor"
+    //% block="arrêter $m motor"
     //% group="Moteur" weight=96
     export function motorStop(m: KBitMotorObs) {
         if (!PCA9685_Initialized) {
