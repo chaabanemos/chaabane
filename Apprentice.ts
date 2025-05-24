@@ -8,7 +8,9 @@ const enum KBitMotorObs {
     coté_droit = 1
 }
 const enum KBitMotorDir {
+   //% block="avancer"
     Avancer = 0,
+   //% block="reculer"
     Reculer = 1
 }
 /**
