@@ -3,13 +3,13 @@
 */
 const enum KBitMotorObs {
   //% block="Côté gauche"
-    LeftSide = 0,
+    coté gauche = 0,
     //% block="Côté droit"
-    RightSide = 1
+    coté droit = 1
 }
 const enum KBitMotorDir {
-    Forwardcode = 0,
-    Backcode = 1
+    Avancer = 0,
+    Reculer = 1
 }
 /**
 * used for RGB-LED
@@ -25,10 +25,10 @@ const enum KBitColor {
  * used for control motor
  */
 const enum KBitDir {
-    RunForwardcode = 0,
-    RunBackcode = 1,
-    TurnLeftcode = 2,
-    TurnRightcode = 3
+    avancer = 0,
+    Reculer = 1,
+    Tourne à gauche = 2,
+    Tourne droite = 3
 }
 
 const enum KBitIrButtons {
