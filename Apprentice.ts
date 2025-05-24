@@ -27,8 +27,8 @@ const enum KBitColor {
 const enum KBitDir {
     avancer = 0,
     Reculer = 1,
-    Tourne à gauche = 2,
-    Tourne droite = 3
+    Tourne_gauche = 2,
+    Tourne_droite = 3
 }
 
 const enum KBitIrButtons {
