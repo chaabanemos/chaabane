@@ -1,3 +1,6 @@
+
+
+
 /**
 * used for motor and infrared obstacle sensor
 */
@@ -81,6 +84,8 @@ const enum KBitIrButtons {
 //% color="#ff6800" icon="\uf1b9" weight=15
 //% groups="['Motorss', 'RGB-led', 'Neo-pixel', 'Sensor', 'Tone']"
 namespace kBit {
+  //% blockNamespace=kBit
+
 
     /**
      * used to control PCA9685
