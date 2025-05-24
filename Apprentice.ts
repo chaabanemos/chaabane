@@ -194,8 +194,8 @@ namespace kBit {
     /**
      * stop the car from moving
      */
-    //% block="car stop"
-    //% group="Motor" weight=98
+    //% block="stop voiture"
+    //% group="moteur" weight=98
     export function carStop() {
         if (!PCA9685_Initialized) {
             initPCA9685();
@@ -213,7 +213,7 @@ namespace kBit {
      */
     //% block="$m motor run $md speed: $speed \\%"
     //% speed.min=0 speed.max=100
-    //% group="Motor" weight=97
+    //% group="Moteur" weight=97
     export function motor(m: KBitMotorObs, md: KBitMotorDir, speed: number) {
         if (!PCA9685_Initialized) {
             initPCA9685();
@@ -245,7 +245,7 @@ namespace kBit {
      * @param M which motor to stop
      */
     //% block="stop $m motor"
-    //% group="Motor" weight=96
+    //% group="Moteur" weight=96
     export function motorStop(m: KBitMotorObs) {
         if (!PCA9685_Initialized) {
             initPCA9685();
