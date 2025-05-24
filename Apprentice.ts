@@ -5,7 +5,7 @@ const enum KBitMotorObs {
   //% block="Côté gauche"
     coté_gauche = 0,
     //% block="Côté droit"
-    coté droit = 1
+    coté_droit = 1
 }
 const enum KBitMotorDir {
     Avancer = 0,
