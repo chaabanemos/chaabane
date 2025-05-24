@@ -2,12 +2,12 @@
 * used for motor and infrared obstacle sensor
 */
 const enum KBitMotorObs {
-    LeftSide = 0,
-    RightSide = 1
+    LeftSidecode = 0,
+    RightSidecode = 1
 }
 const enum KBitMotorDir {
-    Forward = 0,
-    Back = 1
+    Forwardcode = 0,
+    Backcode = 1
 }
 /**
 * used for RGB-LED
