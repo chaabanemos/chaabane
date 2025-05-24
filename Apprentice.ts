@@ -164,7 +164,7 @@ namespace kBit {
      */
     //% block="voiture $direction speed: $speed \\%"
     //% speed.min=0 speed.max=100
-    //% group="Motor" weight=99
+    //% group="Moteur" weight=99
     export function run(direction: KBitDir, speed: number) {
         if (!PCA9685_Initialized) {
             initPCA9685();
