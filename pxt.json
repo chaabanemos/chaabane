@@ -2,6 +2,8 @@
     "name": "apprentice_car",
     "version": "1.0.1",
     "description": "Makecode Extension for the Apprentice Car made by Resolute",
+    "keywords": ["monrobot", "chaabane", "car", "voiture", "microbit"],
+    
     "license": "MIT",
     "dependencies": {
         "core": "*",
