@@ -83,6 +83,16 @@ const enum KBitIrButtons {
 
 //% color="#ff6800" icon="\uf1b9" weight=15
 //% groups="['Motorss', 'RGB-led', 'Neo-pixel', 'Sensor', 'Tone']"
+
+namespace chaabane {
+  //% blockNamespace=chaabane
+}
+
+
+
+
+
+
 namespace kBit {
   //% blockNamespace=kBit
 
