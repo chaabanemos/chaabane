@@ -19,12 +19,17 @@ const enum KBitMotorDir {
 /**
 * used for RGB-LED
 */
-const enum CouleurLED {
-    Rouge,
-    Vert,
-    Bleu,
-    Blanc,
-    Noir
+const enum KBitColor {
+    //% block="rouge"
+    Red,
+    //% block="vert"
+    Green,
+    //% block="bleu"
+    Blue,
+    //% block="blanc"
+    White,
+    //% block="noir"
+    Black
 }
 /**
  * used for control motor
