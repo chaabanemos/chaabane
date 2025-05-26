@@ -285,7 +285,7 @@ namespace kBit {
      * set rgb-led brightness
      */
     let lBrightness = 4095;  //control the rgb-led brightness
-    //% block="LED brightness $br"
+    //% block="LED couleur $br"
     //% br.min=0 br.max=255
     //% group="RGB-led" weight=79
     export function ledBrightness(br: number) {
