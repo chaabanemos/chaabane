@@ -1,24 +1,24 @@
-
-
-
 /**
-* used for motor and infrared obstacle sensor
+* utilisé pour les capteurs d’obstacles infrarouges et les moteurs
 */
 const enum KBitMotorObs {
-  //% block="Côté gauche"
+    //% block="Côté gauche"
     coté_gauche = 0,
     //% block="Côté droit"
     coté_droit = 1
 }
+
 const enum KBitMotorDir {
-   //% block="avancer"
+    //% block="avancer"
     Avancer = 0,
-   //% block="reculer"
+    //% block="reculer"
     Reculer = 1
 }
+
 /**
-* used for RGB-LED
+* utilisé pour la LED RVB
 */
+//% blockIdentity="kBit.led"
 const enum KBitColor {
     //% block="rouge"
     Red,
