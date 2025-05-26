@@ -281,88 +281,92 @@ namespace kBit {
     }
 
     /////////////////////////////////////////////////////
-    /**
-     * set rgb-led brightness
-     */
-    let lBrightness = 4095;  //control the rgb-led brightness
-    //% block="LED couleur $br"
-    //% br.min=0 br.max=255
-    //% group="RGB-led" weight=79
-    export function ledBrightness(br: number) {
-        if (!PCA9685_Initialized) {
-            initPCA9685();
-        }
-        lBrightness = Math.map(br, 0, 255, 4095, 0);
+   /**
+ * définir la luminosité des LED RVB
+ */
+let lBrightness = 4095;
+//% block="luminosité LED couleur $br"
+//% br.min=0 br.max=255
+//% group="LED RVB" weight=79
+export function ledBrightness(br: number) {
+    if (!PCA9685_Initialized) {
+        initPCA9685();
     }
-    /**
-     * set the rgb-led color via the color card
-     * @param col color to make LED lights
-     */
-    //% block="set RGBled $col"
-    //% group="RGB-led" weight=78
-    export function led(col: KBitColor) {
-        if (!PCA9685_Initialized) {
-            initPCA9685();
-        }
-        if (col == KBitColor.Red) {
-            setPwm(5, 0, 4095);
-            setPwm(6, 0, lBrightness);
-            setPwm(4, 0, 4095);
-        }
-        if (col == KBitColor.Green) {
-            setPwm(5, 0, lBrightness);
-            setPwm(6, 0, 4095);
-            setPwm(4, 0, 4095);
-        }
-        if (col == KBitColor.Blue) {
-            setPwm(5, 0, 4095);
-            setPwm(6, 0, 4095);
-            setPwm(4, 0, lBrightness);
-        }
-        if (col == KBitColor.White) {
-            setPwm(5, 0, lBrightness);
-            setPwm(6, 0, lBrightness);
-            setPwm(4, 0, lBrightness);
-        }
-        if (col == KBitColor.Black) {
-            setPwm(5, 0, 4095);
-            setPwm(6, 0, 4095);
-            setPwm(4, 0, 4095);
-        }
+    lBrightness = Math.map(br, 0, 255, 4095, 0);
+}
+
+/**
+ * définir la couleur des LED RVB à partir de la sélection
+ * @param col couleur choisie
+ */
+//% block="définir la couleur de la LED RVB à $col"
+//% group="LED RVB" weight=78
+export function led(col: KBitColor) {
+    if (!PCA9685_Initialized) {
+        initPCA9685();
     }
-    /**
-     * set the rgb-led color via data
-     */
-    //% block=" set RGBled R:$red G:$green B:$blue"
-    //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
-    //% group="RGB-led" weight=77
-    export function setLed(red: number, green: number, blue: number) {
-        if (!PCA9685_Initialized) {
-            initPCA9685();
-        }
-
-        let R = Math.map(red, 0, 255, 4095, lBrightness);
-        let G = Math.map(green, 0, 255, 4095, lBrightness);
-        let B = Math.map(blue, 0, 255, 4095, lBrightness);
-
-        setPwm(6, 0, R);
-        setPwm(5, 0, G);
-        setPwm(4, 0, B);
-    }
-    /**
-     * turn off all rgb-led
-     */
-    //% block="turn off RGB-led"
-    //% group="RGB-led" weight=76
-    export function offLed() {
-        if (!PCA9685_Initialized) {
-            initPCA9685();
-        }
-
-        setPwm(6, 0, 4095);
+    if (col == KBitColor.Red) {
         setPwm(5, 0, 4095);
+        setPwm(6, 0, lBrightness);
         setPwm(4, 0, 4095);
     }
+    if (col == KBitColor.Green) {
+        setPwm(5, 0, lBrightness);
+        setPwm(6, 0, 4095);
+        setPwm(4, 0, 4095);
+    }
+    if (col == KBitColor.Blue) {
+        setPwm(5, 0, 4095);
+        setPwm(6, 0, 4095);
+        setPwm(4, 0, lBrightness);
+    }
+    if (col == KBitColor.White) {
+        setPwm(5, 0, lBrightness);
+        setPwm(6, 0, lBrightness);
+        setPwm(4, 0, lBrightness);
+    }
+    if (col == KBitColor.Black) {
+        setPwm(5, 0, 4095);
+        setPwm(6, 0, 4095);
+        setPwm(4, 0, 4095);
+    }
+}
+
+/**
+ * définir la couleur RGB en entrant les valeurs RVB manuellement
+ */
+//% block="définir LED RVB R:$red V:$green B:$blue"
+//% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
+//% group="LED RVB" weight=77
+export function setLed(red: number, green: number, blue: number) {
+    if (!PCA9685_Initialized) {
+        initPCA9685();
+    }
+
+    let R = Math.map(red, 0, 255, 4095, lBrightness);
+    let G = Math.map(green, 0, 255, 4095, lBrightness);
+    let B = Math.map(blue, 0, 255, 4095, lBrightness);
+
+    setPwm(6, 0, R);
+    setPwm(5, 0, G);
+    setPwm(4, 0, B);
+}
+
+/**
+ * éteindre toutes les LED RVB
+ */
+//% block="éteindre les LED RVB"
+//% group="LED RVB" weight=76
+export function offLed() {
+    if (!PCA9685_Initialized) {
+        initPCA9685();
+    }
+
+    setPwm(6, 0, 4095);
+    setPwm(5, 0, 4095);
+    setPwm(4, 0, 4095);
+}
+
 
     /////////////////////////////////////////////////////
 
