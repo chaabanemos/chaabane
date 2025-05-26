@@ -1,5 +1,6 @@
 
 # Apprentice Car blocks for micro:bit
+Extension développée et adaptée par **M. Chaabane** pour l'enseignement de la programmation avec micro:bit et robotique.
 
 The product page for the Apprentice Car can be found at [https://resoluteshop.co.za/product/apprentice-car/](https://resoluteshop.co.za/product/apprentice-car/)
 
