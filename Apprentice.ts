@@ -20,7 +20,7 @@ const enum KBitMotorDir {
 * used for RGB-LED
 */
 const enum CouleurLED {
-    Rouge,
+    Red,
     Vert,
     Bleu,
     Blanc,
